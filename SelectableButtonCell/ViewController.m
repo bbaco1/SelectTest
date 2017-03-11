@@ -7,23 +7,44 @@
 //
 
 #import "ViewController.h"
+#import "ExampleItem.h"
 
-@interface ViewController ()
+@interface ViewController () {
+    NSMutableArray *eventItems;
+    NSMutableArray *selectedEventItems;
+}
 
 @end
 
 @implementation ViewController
 
+#pragma mark - view life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    eventItems = [NSMutableArray new];
+    selectedEventItems = [NSMutableArray new];
+    
+    for (int i = 0; i < 11; i++) {
+        ExampleItem *exampleItem = [ExampleItem new];
+        [eventItems addObject:exampleItem];
+    }
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - tableView delegate methods
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    EventCell *eventCell = [tableView dequeueReusableCellWithIdentifier:@"eventCellID"];
+    eventCell.item = [eventItems objectAtIndex:indexPath.row];
+    return eventCell;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return eventItems.count;
+}
+
+- (void)userSelectedItem:(ExampleItem *)item {
+    if (![selectedEventItems containsObject:item]) {
+        [selectedEventItems addObject:item];
+    }
+}
 
 @end

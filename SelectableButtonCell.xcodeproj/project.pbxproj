@@ -15,6 +15,8 @@
 		AC9F9B861E73D7ED002B61E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC9F9B841E73D7ED002B61E8 /* LaunchScreen.storyboard */; };
 		AC9F9B911E73D7ED002B61E8 /* SelectableButtonCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC9F9B901E73D7ED002B61E8 /* SelectableButtonCellTests.m */; };
 		AC9F9B9C1E73D7ED002B61E8 /* SelectableButtonCellUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC9F9B9B1E73D7ED002B61E8 /* SelectableButtonCellUITests.m */; };
+		AC9F9BAB1E73D906002B61E8 /* EventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC9F9BAA1E73D906002B61E8 /* EventCell.m */; };
+		AC9F9BAF1E73DA85002B61E8 /* ExampleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AC9F9BAE1E73DA85002B61E8 /* ExampleItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		AC9F9B971E73D7ED002B61E8 /* SelectableButtonCellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelectableButtonCellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC9F9B9B1E73D7ED002B61E8 /* SelectableButtonCellUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectableButtonCellUITests.m; sourceTree = "<group>"; };
 		AC9F9B9D1E73D7ED002B61E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC9F9BA91E73D906002B61E8 /* EventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCell.h; sourceTree = "<group>"; };
+		AC9F9BAA1E73D906002B61E8 /* EventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCell.m; sourceTree = "<group>"; };
+		AC9F9BAD1E73DA85002B61E8 /* ExampleItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleItem.h; sourceTree = "<group>"; };
+		AC9F9BAE1E73DA85002B61E8 /* ExampleItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,9 @@
 				AC9F9B7A1E73D7ED002B61E8 /* AppDelegate.m */,
 				AC9F9B7C1E73D7ED002B61E8 /* ViewController.h */,
 				AC9F9B7D1E73D7ED002B61E8 /* ViewController.m */,
+				AC9F9BAD1E73DA85002B61E8 /* ExampleItem.h */,
+				AC9F9BAE1E73DA85002B61E8 /* ExampleItem.m */,
+				AC9F9BAC1E73D932002B61E8 /* Cells */,
 				AC9F9B7F1E73D7ED002B61E8 /* Main.storyboard */,
 				AC9F9B821E73D7ED002B61E8 /* Assets.xcassets */,
 				AC9F9B841E73D7ED002B61E8 /* LaunchScreen.storyboard */,
@@ -138,6 +147,15 @@
 				AC9F9B9D1E73D7ED002B61E8 /* Info.plist */,
 			);
 			path = SelectableButtonCellUITests;
+			sourceTree = "<group>";
+		};
+		AC9F9BAC1E73D932002B61E8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AC9F9BA91E73D906002B61E8 /* EventCell.h */,
+				AC9F9BAA1E73D906002B61E8 /* EventCell.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +291,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC9F9BAB1E73D906002B61E8 /* EventCell.m in Sources */,
+				AC9F9BAF1E73DA85002B61E8 /* ExampleItem.m in Sources */,
 				AC9F9B7E1E73D7ED002B61E8 /* ViewController.m in Sources */,
 				AC9F9B7B1E73D7ED002B61E8 /* AppDelegate.m in Sources */,
 				AC9F9B781E73D7ED002B61E8 /* main.m in Sources */,
